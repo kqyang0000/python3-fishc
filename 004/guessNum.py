@@ -17,5 +17,5 @@ else:
             inp = int(inp)
         if inp == secret:
             print("you win")
-            break;
+            break
 print('--------- 游戏结束 ----------')
