@@ -75,9 +75,9 @@ def save_imgs(img_addrs):
             f.write(img)
 
 
-def download(i):
-    os.mkdir(path + i)
-    os.chdir(path + i)
+def download(i, date_file):
+    os.mkdir(path + i + '/' + date_file)
+    os.chdir(path + i + '/' + date_file)
 
     # url = 'http://jandan.net/ooxx/'
     url = 'http://jandan.net/' + i + '/'
@@ -94,4 +94,5 @@ def download(i):
 
 if __name__ == '__main__':
     inp = input("请输入爬取文件类型：")
-    download(inp)
+    date_file = input("请输入文件夹名称：")
+    download(inp, date_file)
